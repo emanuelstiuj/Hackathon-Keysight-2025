@@ -5,6 +5,7 @@
 #include <mutex>
 #include <sycl/sycl.hpp>
 #include <pcap/pcap.h>
+#include <errno.h>
 #include <tbb/blocked_range.h>
 #include <tbb/global_control.h>
 #include <tbb/flow_graph.h>
@@ -29,6 +30,8 @@ const size_t burst_size = 32;
 static std::mutex cout_mutex;
 
 static std::mutex socket_mutex;
+
+static std::mutex socket_in_mutex;
 
 // Structure to hold packet data for burst processing
 struct PacketData {
@@ -173,7 +176,14 @@ int main() {
         return 1;
     }
 
-    std::string interface = "eth0";
+    int sockfd_in = socket(AF_PACKET, SOCK_RAW, htons(ETH_P_ALL));
+    if (sockfd_in < 0) {
+        std::cerr << "Failed to create input raw socket (are you running as root?)\n";
+        close(sockfd_in); // Close sending socket
+        return 1;
+    }
+
+    std::string interface = "enx5ca6e69d93fc";
     struct sockaddr_ll socket_address;
     std::memset(&socket_address, 0, sizeof(socket_address));
     socket_address.sll_family = AF_PACKET;
@@ -191,22 +201,41 @@ int main() {
         return 1;
     }
 
+    // Bind to interface
+    std::string interface_in = "enx5ca6e69d93fc";
+    struct sockaddr_ll socket_address_in;
+    std::memset(&socket_address_in, 0, sizeof(socket_address_in));
+    socket_address_in.sll_family = AF_PACKET;
+    socket_address_in.sll_protocol = htons(ETH_P_ALL);
+    socket_address_in.sll_ifindex = if_nametoindex(interface_in.c_str());
+    if (socket_address_in.sll_ifindex == 0) {
+        std::cerr << "Failed to get interface index for " << interface_in << "\n";
+        close(sockfd_in);
+        return 1;
+    }
+
+    if (bind(sockfd_in, (struct sockaddr*)&socket_address_in, sizeof(socket_address_in)) < 0) {
+        std::cerr << "Failed to bind input raw socket to " << interface << "\n";
+        close(sockfd_in);
+        return 1;
+    }
+
     // Set up TBB thread control
     int nth = 10;
     auto mp = tbb::global_control::max_allowed_parallelism;
     tbb::global_control gc(mp, nth);
     tbb::flow::graph g;
 
-    // Open PCAP file
+    //Open PCAP file
     char errbuf[PCAP_ERRBUF_SIZE];
-    std::string pcap_file = "/challenge/proiecte/keysight-challenge-2025/src/capture2.pcap";
+    std::string pcap_file = "/challenge/src/capture2.pcap";
     pcap_t* pcap_handle = pcap_open_offline(pcap_file.c_str(), errbuf);
     if (!pcap_handle) {
         std::cerr << "pcap_open_offline() failed: " << errbuf << "\n";
         return 1;
     }
 
-    // Input node: Read packets in bursts
+    //Input node: Read packets in bursts
     tbb::flow::input_node<std::vector<PacketData>> in_node{g,
         [&](tbb::flow_control& fc) -> std::vector<PacketData> {
             std::vector<PacketData> burst;
@@ -246,14 +275,47 @@ int main() {
         }
     };
 
+    //Input node: Read packets from raw socket
+    // tbb::flow::input_node<std::vector<PacketData>> in_node{g,
+    //     [=](tbb::flow_control& fc) -> std::vector<PacketData> {
+    //         std::vector<PacketData> burst;
+    //         burst.reserve(burst_size); // Avoid reallocations
+
+    //         {
+    //             std::lock_guard<std::mutex> lock(socket_in_mutex); // Synchronize reads
+    //             // Receive up to burst_size packets
+    //             for (size_t i = 0; i < burst_size; ++i) {
+    //                 PacketData pkt;
+    //                 ssize_t bytes_received = recvfrom(sockfd_in, pkt.data.data(), PACKET_SIZE, 0, nullptr, nullptr);
+    //                 if (bytes_received > 0) {
+    //                     burst.push_back(pkt);
+    //                 } else if (errno == EAGAIN || errno == EWOULDBLOCK) {
+    //                     // No packets available
+    //                     break;
+    //                 } else {
+    //                     std::lock_guard<std::mutex> cout_lock(cout_mutex);
+    //                     std::cerr << "Error receiving packet\n";
+    //                     break;
+    //                 }
+    //             }
+    //         }
+
+    //         if (burst.empty()) {
+    //             // Keep running
+    //             return {};
+    //         }
+
+    //         // {
+    //         //     std::lock_guard<std::mutex> lock(cout_mutex);
+    //         //     std::cout << "Received burst of " << burst.size() << " packets\n";
+    //         // }
+    //         return burst;
+    //     }
+    // };
+
     // Packet inspection node: Analyze and filter IPv4/IPv6 packets in parallel
     tbb::flow::function_node<std::vector<PacketData>, std::vector<PacketData>> inspect_packet_node {
         g, tbb::flow::unlimited, [&](std::vector<PacketData> burst) -> std::vector<PacketData> {
-
-            // Print packet info sequentially for debugging
-            for (const auto& pkt : burst) {
-                //print_packet_info(&pkt.header, pkt.data.data());
-            }
 
             // Parallel packet analysis with SYCL
             PacketStats stats;
@@ -332,13 +394,6 @@ int main() {
             std::vector<PacketData> ip_packets;
             ip_packets.reserve(burst.size());
 
-            
-            if (burst.size() < 32) {
-                std::lock_guard<std::mutex> lock(cout_mutex);
-                std::cout << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
-            }
-
-
             for (size_t i = 0; i < burst.size(); ++i) {
                 if (is_ip_packet[i]) {
                     ip_packets.push_back(burst[i]);
@@ -391,6 +446,9 @@ int main() {
             }
 
             return modified_packets; // Send to sending_node
+
+            global_stats.print();
+            
         }
     };
 
@@ -401,11 +459,15 @@ int main() {
                 std::lock_guard<std::mutex> lock(socket_mutex); // Synchronize socket writes
                 for (const auto& pkt : modified_packets) {
                     // Send raw packet data
+                    
+
                     ssize_t bytes_sent = sendto(sockfd, pkt.data.data(), pkt.header.caplen, 0,
                                                 (struct sockaddr*)&socket_address, sizeof(socket_address));
+
                     if (bytes_sent < 0) {
-                        std::lock_guard<std::mutex> cout_lock(cout_mutex);
+                        //std::lock_guard<std::mutex> cout_lock(cout_mutex);
                         std::cerr << "Failed to send packet data\n";
+                        std::cout <<  pkt.header.caplen << "\n";
                     }
                 }
             }
@@ -428,6 +490,6 @@ int main() {
 
     global_stats.print();
     
-    pcap_close(pcap_handle);
+    //pcap_close(pcap_handle);
     return 0;
 }
