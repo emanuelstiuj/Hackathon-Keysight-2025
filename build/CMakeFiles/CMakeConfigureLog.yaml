@@ -1,0 +1,914 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      The system is: Linux - 6.8.0-57-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/intel/oneapi/compiler/2025.1/bin/icpx 
+      Build flags: -fsycl
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is IntelLLVM, found in:
+        /challenge/build/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/challenge/build/CMakeFiles/CMakeScratch/TryCompile-OkfPDW"
+      binary: "/challenge/build/CMakeFiles/CMakeScratch/TryCompile-OkfPDW"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fsycl"
+      CMAKE_EXE_LINKER_FLAGS: " -lpcap"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-OkfPDW'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_20f27/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_20f27.dir/build.make CMakeFiles/cmTC_20f27.dir/build
+        gmake[1]: Entering directory '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-OkfPDW'
+        Building CXX object CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/intel/oneapi/compiler/2025.1/bin/icpx   -fsycl    -v -MD -MT CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Intel(R) oneAPI DPC++/C++ Compiler 2025.1.0 (2025.1.0.20250317)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /opt/intel/oneapi/compiler/2025.1/bin/compiler
+        Configuration file: /opt/intel/oneapi/compiler/2025.1/bin/compiler/../icpx.cfg
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" -cc1 -triple spir64-unknown-unknown -aux-triple x86_64-unknown-linux-gnu -fsycl-is-device -fdeclare-spirv-builtins -mllvm -sycl-opt -fenable-sycl-dae -Wno-sycl-strict -fsycl-int-header=/tmp/icpx-6012874c50/CMakeCXXCompilerABI-header-d7af40.h -fsycl-int-footer=/tmp/icpx-6012874c50/CMakeCXXCompilerABI-footer-f627d6.h -sycl-std=2020 -ffine-grained-bitfield-accesses -fsycl-unique-prefix=uid0ef5b180e54631b2 -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -Wspir-compat -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -faltmathlib=LibDeviceIMFAltMathLibrary -mframe-pointer=all -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -complex-range=promoted -mconstructor-aliases -aux-target-cpu x86-64 -debugger-tuning=gdb -fdebug-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-OkfPDW -v -fcoverage-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-OkfPDW -fclang-abi-compat=17 -resource-dir /opt/intel/oneapi/compiler/2025.1/lib/clang/20 -dependency-file CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include -I/opt/intel/oneapi/umf/0.10/include -I/opt/intel/oneapi/tbb/2022.1/env/../include -I/opt/intel/oneapi/pti/0.11/include -I/opt/intel/oneapi/mpi/2021.15/include -I/opt/intel/oneapi/mkl/2025.1/include -I/opt/intel/oneapi/ippcp/2025.1/include -I/opt/intel/oneapi/ipp/2022.1/include -I/opt/intel/oneapi/dpl/2022.8/include -I/opt/intel/oneapi/dpcpp-ct/2025.1/include -I/opt/intel/oneapi/dnnl/2025.1/include -I/opt/intel/oneapi/dev-utilities/2025.1/include -I/opt/intel/oneapi/dal/2025.4/include -I/opt/intel/oneapi/dal/2025.4/include/dal -I/opt/intel/oneapi/ccl/2021.15/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fgpu-rdc -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -mllvm -disable-hir-generate-mkl-call -mllvm -intel-abi-compatible=true -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-compatibility-disable=FakeLoad -fintel-libirc-allowed -fintel-libimf-allowed -o /tmp/icpx-6012874c50/CMakeCXXCompilerABI-326306.bc -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward"
+        ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"
+        ignoring duplicate directory "/usr/local/include"
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu"
+        ignoring duplicate directory "/usr/include"
+        ignoring duplicate directory "/usr/local/include"
+        ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"
+        ignoring duplicate directory "/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/intel/oneapi/umf/0.10/include
+         /opt/intel/oneapi/tbb/2022.1/env/../include
+         /opt/intel/oneapi/pti/0.11/include
+         /opt/intel/oneapi/mpi/2021.15/include
+         /opt/intel/oneapi/mkl/2025.1/include
+         /opt/intel/oneapi/ippcp/2025.1/include
+         /opt/intel/oneapi/ipp/2022.1/include
+         /opt/intel/oneapi/dpl/2022.8/include
+         /opt/intel/oneapi/dpcpp-ct/2025.1/include
+         /opt/intel/oneapi/dnnl/2025.1/include
+         /opt/intel/oneapi/dev-utilities/2025.1/include
+         /opt/intel/oneapi/dal/2025.4/include
+         /opt/intel/oneapi/dal/2025.4/include/dal
+         /opt/intel/oneapi/ccl/2021.15/include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward
+         /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" -cc1 -triple x86_64-unknown-linux-gnu -fsycl-is-host -include-internal-header /tmp/icpx-6012874c50/CMakeCXXCompilerABI-header-d7af40.h -dependency-filter /tmp/icpx-6012874c50/CMakeCXXCompilerABI-header-d7af40.h -fsycl-enable-int-header-diags -include-internal-footer /tmp/icpx-6012874c50/CMakeCXXCompilerABI-footer-f627d6.h -dependency-filter /tmp/icpx-6012874c50/CMakeCXXCompilerABI-footer-f627d6.h -sycl-std=2020 -fsycl-unique-prefix=uid0ef5b180e54631b2 -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -faltmathlib=SVMLAltMathLibrary -mframe-pointer=none -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -complex-range=promoted -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic --dependent-lib=sycl-devicelib-host -debugger-tuning=gdb -fdebug-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-OkfPDW -v -fcoverage-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-OkfPDW -fclang-abi-compat=17 -resource-dir /opt/intel/oneapi/compiler/2025.1/lib/clang/20 -dependency-file CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include -I/opt/intel/oneapi/umf/0.10/include -I/opt/intel/oneapi/tbb/2022.1/env/../include -I/opt/intel/oneapi/pti/0.11/include -I/opt/intel/oneapi/mpi/2021.15/include -I/opt/intel/oneapi/mkl/2025.1/include -I/opt/intel/oneapi/ippcp/2025.1/include -I/opt/intel/oneapi/ipp/2022.1/include -I/opt/intel/oneapi/dpl/2022.8/include -I/opt/intel/oneapi/dpcpp-ct/2025.1/include -I/opt/intel/oneapi/dnnl/2025.1/include -I/opt/intel/oneapi/dev-utilities/2025.1/include -I/opt/intel/oneapi/dal/2025.4/include -I/opt/intel/oneapi/dal/2025.4/include/dal -I/opt/intel/oneapi/ccl/2021.15/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fgpu-rdc -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -mllvm -disable-hir-generate-mkl-call -mllvm -sycl-host -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -fintel-libimf-allowed -o /tmp/icpx-6012874c50/CMakeCXXCompilerABI-8c71c6.o -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward"
+        ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"
+        ignoring duplicate directory "/usr/local/include"
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu"
+        ignoring duplicate directory "/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/intel/oneapi/umf/0.10/include
+         /opt/intel/oneapi/tbb/2022.1/env/../include
+         /opt/intel/oneapi/pti/0.11/include
+         /opt/intel/oneapi/mpi/2021.15/include
+         /opt/intel/oneapi/mkl/2025.1/include
+         /opt/intel/oneapi/ippcp/2025.1/include
+         /opt/intel/oneapi/ipp/2022.1/include
+         /opt/intel/oneapi/dpl/2022.8/include
+         /opt/intel/oneapi/dpcpp-ct/2025.1/include
+         /opt/intel/oneapi/dnnl/2025.1/include
+         /opt/intel/oneapi/dev-utilities/2025.1/include
+         /opt/intel/oneapi/dal/2025.4/include
+         /opt/intel/oneapi/dal/2025.4/include/dal
+         /opt/intel/oneapi/ccl/2021.15/include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward
+         /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown,host-x86_64-unknown-linux-gnu -output=CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o -input=/tmp/icpx-6012874c50/CMakeCXXCompilerABI-326306.bc -input=/tmp/icpx-6012874c50/CMakeCXXCompilerABI-8c71c6.o -verbose
+        Linking CXX executable cmTC_20f27
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20f27.dir/link.txt --verbose=1
+        /opt/intel/oneapi/compiler/2025.1/bin/icpx  -fsycl   -lpcap -v CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_20f27 
+        Intel(R) oneAPI DPC++/C++ Compiler 2025.1.0 (2025.1.0.20250317)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /opt/intel/oneapi/compiler/2025.1/bin/compiler
+        Configuration file: /opt/intel/oneapi/compiler/2025.1/bin/compiler/../icpx.cfg
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+        /opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o -list 
+        /opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o -list 
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,sycl-spir64-unknown-unknown -input=CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o -output=/tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-4bc0de.o -output=/tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-3881db.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-e532a6deb7 -verbose
+        Uncompressed bundle.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,sycl-spir64-unknown-unknown -input=CMakeFiles/cmTC_20f27.dir/CMakeCXXCompilerABI.cpp.o -output=/tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-37105c.o -output=/tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-792096.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-e532a6deb7 -verbose
+        Uncompressed bundle.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/spirv-to-ir-wrapper" /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-792096.o -o /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-c89bcb.bc -llvm-spirv-opts "--spirv-preserve-auxdata --spirv-target-env=SPV-IR --spirv-builtin-format=global"
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-link" /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-c89bcb.bc -o /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-b07714.bc --suppress-warnings
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-link" -only-needed /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-b07714.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-crt.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-complex.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-complex-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-cmath.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-cmath-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf-bf16.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cassert.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cstring.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-complex.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-complex-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cmath.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cmath-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf-bf16.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-user-wrappers.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-compiler-wrappers.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-stubs.bc -o /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-54cd59.bc --suppress-warnings
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/sycl-post-link" -O2 -device-globals -properties -spec-const=native -split=auto -emit-only-kernels-as-entry-points -emit-param-info -symbols -emit-exported-symbols -emit-imported-symbols -split-esimd -lower-esimd -o /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-881996.table /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-54cd59.bc
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/file-table-tform" -extract=Code -drop_titles -o /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-500709.txt /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-881996.table
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-foreach" --in-file-list=/tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-500709.txt --in-replace=/tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-500709.txt --out-ext=spv --out-file-list=/tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-ed178d.txt --out-replace=/tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-ed178d.txt --out-dir=/tmp/icpx-e532a6deb7 -- /opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-spirv -o /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-ed178d.txt -spirv-max-version=1.4 -spirv-debug-info-version=nonsemantic-shader-200 -spirv-allow-unknown-intrinsics=llvm.genx. -spirv-allow-unknown-intrinsics=llvm.genx. -spirv-ext=-all,+SPV_EXT_shader_atomic_float_add,+SPV_EXT_shader_atomic_float_min_max,+SPV_KHR_no_integer_wrap_decoration,+SPV_KHR_float_controls,+SPV_KHR_bit_instructions,+SPV_KHR_expect_assume,+SPV_KHR_linkonce_odr,+SPV_INTEL_subgroups,+SPV_INTEL_media_block_io,+SPV_INTEL_device_side_avc_motion_estimation,+SPV_INTEL_fpga_loop_controls,+SPV_INTEL_unstructured_loop_controls,+SPV_INTEL_fpga_reg,+SPV_INTEL_blocking_pipes,+SPV_INTEL_function_pointers,+SPV_INTEL_kernel_attributes,+SPV_INTEL_io_pipes,+SPV_INTEL_inline_assembly,+SPV_INTEL_arbitrary_precision_integers,+SPV_INTEL_float_controls2,+SPV_INTEL_vector_compute,+SPV_INTEL_fast_composite,+SPV_INTEL_arbitrary_precision_fixed_point,+SPV_INTEL_arbitrary_precision_floating_point,+SPV_INTEL_variable_length_array,+SPV_INTEL_fp_fast_math_mode,+SPV_INTEL_long_constant_composite,+SPV_INTEL_arithmetic_fence,+SPV_INTEL_global_variable_decorations,+SPV_INTEL_cache_controls,+SPV_INTEL_fpga_buffer_location,+SPV_INTEL_fpga_argument_interfaces,+SPV_INTEL_fpga_invocation_pipelining_attributes,+SPV_INTEL_fpga_latency_control,+SPV_KHR_shader_clock,+SPV_INTEL_bindless_images,+SPV_INTEL_task_sequence,+SPV_INTEL_optnone,+SPV_INTEL_bfloat16_conversion,+SPV_INTEL_joint_matrix,+SPV_INTEL_hw_thread_queries,+SPV_INTEL_memory_access_aliasing,+SPV_KHR_uniform_group_instructions,+SPV_INTEL_masked_gather_scatter,+SPV_INTEL_tensor_float32_conversion,+SPV_INTEL_optnone,+SPV_KHR_non_semantic_info,+SPV_KHR_cooperative_matrix,+SPV_EXT_shader_atomic_float16_add /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-500709.txt
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/file-table-tform" -replace=Code,Code -o /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-24e9bf.table /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-881996.table /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-ed178d.txt
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-wrapper" -o=/tmp/icpx-e532a6deb7/wrapper-470509.bc -host=x86_64-unknown-linux-gnu -compile-opts=-ftarget-register-alloc-mode=pvc:-ze-intel-enable-auto-large-GRF-mode -target=spir64 -kind=sycl -batch /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-24e9bf.table
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" --target=x86_64-unknown-linux-gnu -c -o /tmp/icpx-e532a6deb7/cmTC_20f27-wrapper-e13ae8.o /tmp/icpx-e532a6deb7/wrapper-470509.bc
+         "/usr/bin/ld" -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_20f27 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/lib/clang/20/lib/x86_64-unknown-linux-gnu -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/lib -L/lib -L/usr/lib -L/opt/intel/oneapi/tcm/1.3/lib -L/opt/intel/oneapi/umf/0.10/lib -L/opt/intel/oneapi/tbb/2022.1/env/../lib/intel64/gcc4.8 -L/opt/intel/oneapi/pti/0.11/lib -L/opt/intel/oneapi/mpi/2021.15/lib -L/opt/intel/oneapi/mkl/2025.1/lib -L/opt/intel/oneapi/ippcp/2025.1/lib/ -L/opt/intel/oneapi/ipp/2022.1/lib -L/opt/intel/oneapi/dnnl/2025.1/lib -L/opt/intel/oneapi/dal/2025.4/lib -L/opt/intel/oneapi/compiler/2025.1/lib -L/opt/intel/oneapi/ccl/2021.15/lib/ -lpcap /tmp/icpx-e532a6deb7/CMakeCXXCompilerABI-4bc0de.o /tmp/icpx-e532a6deb7/cmTC_20f27-wrapper-e13ae8.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -lstdc++ -Bstatic -limf -Bdynamic -lm -lgcc_s -lgcc -Bstatic -lirc -Bdynamic -ldl -lgcc_s -lgcc -lsycl -lsycl-devicelib-host -lc -lgcc_s -lgcc -Bstatic -lirc_s -Bdynamic /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+        /usr/bin/ld: cannot find -lpcap: No such file or directory
+        icpx: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_20f27.dir/build.make:100: cmTC_20f27] Error 1
+        gmake[1]: Leaving directory '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-OkfPDW'
+        gmake: *** [Makefile:127: cmTC_20f27/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:13 (project)"
+    checks:
+      - "Check for working CXX compiler: /opt/intel/oneapi/compiler/2025.1/bin/icpx"
+    directories:
+      source: "/challenge/build/CMakeFiles/CMakeScratch/TryCompile-RtzZ7W"
+      binary: "/challenge/build/CMakeFiles/CMakeScratch/TryCompile-RtzZ7W"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fsycl"
+      CMAKE_EXE_LINKER_FLAGS: " -lpcap"
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-RtzZ7W'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_211a6/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_211a6.dir/build.make CMakeFiles/cmTC_211a6.dir/build
+        gmake[1]: Entering directory '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-RtzZ7W'
+        Building CXX object CMakeFiles/cmTC_211a6.dir/testCXXCompiler.cxx.o
+        /opt/intel/oneapi/compiler/2025.1/bin/icpx   -fsycl  -MD -MT CMakeFiles/cmTC_211a6.dir/testCXXCompiler.cxx.o -MF CMakeFiles/cmTC_211a6.dir/testCXXCompiler.cxx.o.d -o CMakeFiles/cmTC_211a6.dir/testCXXCompiler.cxx.o -c /challenge/build/CMakeFiles/CMakeScratch/TryCompile-RtzZ7W/testCXXCompiler.cxx
+        Linking CXX executable cmTC_211a6
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_211a6.dir/link.txt --verbose=1
+        /opt/intel/oneapi/compiler/2025.1/bin/icpx  -fsycl   -lpcap  CMakeFiles/cmTC_211a6.dir/testCXXCompiler.cxx.o -o cmTC_211a6 
+        /usr/bin/ld: cannot find -lpcap: No such file or directory
+        icpx: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_211a6.dir/build.make:100: cmTC_211a6] Error 1
+        gmake[1]: Leaving directory '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-RtzZ7W'
+        gmake: *** [Makefile:127: cmTC_211a6/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/intel/oneapi/compiler/2025.1/bin/icpx 
+      Build flags: -fsycl
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is IntelLLVM, found in:
+        /challenge/build/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/challenge/build/CMakeFiles/CMakeScratch/TryCompile-lvJfB4"
+      binary: "/challenge/build/CMakeFiles/CMakeScratch/TryCompile-lvJfB4"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fsycl"
+      CMAKE_EXE_LINKER_FLAGS: " -lpcap"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-lvJfB4'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_370f9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_370f9.dir/build.make CMakeFiles/cmTC_370f9.dir/build
+        gmake[1]: Entering directory '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-lvJfB4'
+        Building CXX object CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/intel/oneapi/compiler/2025.1/bin/icpx   -fsycl    -v -MD -MT CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Intel(R) oneAPI DPC++/C++ Compiler 2025.1.0 (2025.1.0.20250317)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /opt/intel/oneapi/compiler/2025.1/bin/compiler
+        Configuration file: /opt/intel/oneapi/compiler/2025.1/bin/compiler/../icpx.cfg
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" -cc1 -triple spir64-unknown-unknown -aux-triple x86_64-unknown-linux-gnu -fsycl-is-device -fdeclare-spirv-builtins -mllvm -sycl-opt -fenable-sycl-dae -Wno-sycl-strict -fsycl-int-header=/tmp/icpx-bf7419ac40/CMakeCXXCompilerABI-header-9b8aa4.h -fsycl-int-footer=/tmp/icpx-bf7419ac40/CMakeCXXCompilerABI-footer-918aa3.h -sycl-std=2020 -ffine-grained-bitfield-accesses -fsycl-unique-prefix=uid09001cae233db8e6 -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -Wspir-compat -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -faltmathlib=LibDeviceIMFAltMathLibrary -mframe-pointer=all -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -complex-range=promoted -mconstructor-aliases -aux-target-cpu x86-64 -debugger-tuning=gdb -fdebug-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-lvJfB4 -v -fcoverage-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-lvJfB4 -fclang-abi-compat=17 -resource-dir /opt/intel/oneapi/compiler/2025.1/lib/clang/20 -dependency-file CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include -I/opt/intel/oneapi/umf/0.10/include -I/opt/intel/oneapi/tbb/2022.1/env/../include -I/opt/intel/oneapi/pti/0.11/include -I/opt/intel/oneapi/mpi/2021.15/include -I/opt/intel/oneapi/mkl/2025.1/include -I/opt/intel/oneapi/ippcp/2025.1/include -I/opt/intel/oneapi/ipp/2022.1/include -I/opt/intel/oneapi/dpl/2022.8/include -I/opt/intel/oneapi/dpcpp-ct/2025.1/include -I/opt/intel/oneapi/dnnl/2025.1/include -I/opt/intel/oneapi/dev-utilities/2025.1/include -I/opt/intel/oneapi/dal/2025.4/include -I/opt/intel/oneapi/dal/2025.4/include/dal -I/opt/intel/oneapi/ccl/2021.15/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fgpu-rdc -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -mllvm -disable-hir-generate-mkl-call -mllvm -intel-abi-compatible=true -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-compatibility-disable=FakeLoad -fintel-libirc-allowed -fintel-libimf-allowed -o /tmp/icpx-bf7419ac40/CMakeCXXCompilerABI-6e3773.bc -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward"
+        ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"
+        ignoring duplicate directory "/usr/local/include"
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu"
+        ignoring duplicate directory "/usr/include"
+        ignoring duplicate directory "/usr/local/include"
+        ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"
+        ignoring duplicate directory "/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/intel/oneapi/umf/0.10/include
+         /opt/intel/oneapi/tbb/2022.1/env/../include
+         /opt/intel/oneapi/pti/0.11/include
+         /opt/intel/oneapi/mpi/2021.15/include
+         /opt/intel/oneapi/mkl/2025.1/include
+         /opt/intel/oneapi/ippcp/2025.1/include
+         /opt/intel/oneapi/ipp/2022.1/include
+         /opt/intel/oneapi/dpl/2022.8/include
+         /opt/intel/oneapi/dpcpp-ct/2025.1/include
+         /opt/intel/oneapi/dnnl/2025.1/include
+         /opt/intel/oneapi/dev-utilities/2025.1/include
+         /opt/intel/oneapi/dal/2025.4/include
+         /opt/intel/oneapi/dal/2025.4/include/dal
+         /opt/intel/oneapi/ccl/2021.15/include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward
+         /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" -cc1 -triple x86_64-unknown-linux-gnu -fsycl-is-host -include-internal-header /tmp/icpx-bf7419ac40/CMakeCXXCompilerABI-header-9b8aa4.h -dependency-filter /tmp/icpx-bf7419ac40/CMakeCXXCompilerABI-header-9b8aa4.h -fsycl-enable-int-header-diags -include-internal-footer /tmp/icpx-bf7419ac40/CMakeCXXCompilerABI-footer-918aa3.h -dependency-filter /tmp/icpx-bf7419ac40/CMakeCXXCompilerABI-footer-918aa3.h -sycl-std=2020 -fsycl-unique-prefix=uid09001cae233db8e6 -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -faltmathlib=SVMLAltMathLibrary -mframe-pointer=none -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -complex-range=promoted -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic --dependent-lib=sycl-devicelib-host -debugger-tuning=gdb -fdebug-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-lvJfB4 -v -fcoverage-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-lvJfB4 -fclang-abi-compat=17 -resource-dir /opt/intel/oneapi/compiler/2025.1/lib/clang/20 -dependency-file CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include -I/opt/intel/oneapi/umf/0.10/include -I/opt/intel/oneapi/tbb/2022.1/env/../include -I/opt/intel/oneapi/pti/0.11/include -I/opt/intel/oneapi/mpi/2021.15/include -I/opt/intel/oneapi/mkl/2025.1/include -I/opt/intel/oneapi/ippcp/2025.1/include -I/opt/intel/oneapi/ipp/2022.1/include -I/opt/intel/oneapi/dpl/2022.8/include -I/opt/intel/oneapi/dpcpp-ct/2025.1/include -I/opt/intel/oneapi/dnnl/2025.1/include -I/opt/intel/oneapi/dev-utilities/2025.1/include -I/opt/intel/oneapi/dal/2025.4/include -I/opt/intel/oneapi/dal/2025.4/include/dal -I/opt/intel/oneapi/ccl/2021.15/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fgpu-rdc -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -mllvm -disable-hir-generate-mkl-call -mllvm -sycl-host -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -fintel-libimf-allowed -o /tmp/icpx-bf7419ac40/CMakeCXXCompilerABI-79f171.o -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward"
+        ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"
+        ignoring duplicate directory "/usr/local/include"
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu"
+        ignoring duplicate directory "/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/intel/oneapi/umf/0.10/include
+         /opt/intel/oneapi/tbb/2022.1/env/../include
+         /opt/intel/oneapi/pti/0.11/include
+         /opt/intel/oneapi/mpi/2021.15/include
+         /opt/intel/oneapi/mkl/2025.1/include
+         /opt/intel/oneapi/ippcp/2025.1/include
+         /opt/intel/oneapi/ipp/2022.1/include
+         /opt/intel/oneapi/dpl/2022.8/include
+         /opt/intel/oneapi/dpcpp-ct/2025.1/include
+         /opt/intel/oneapi/dnnl/2025.1/include
+         /opt/intel/oneapi/dev-utilities/2025.1/include
+         /opt/intel/oneapi/dal/2025.4/include
+         /opt/intel/oneapi/dal/2025.4/include/dal
+         /opt/intel/oneapi/ccl/2021.15/include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward
+         /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown,host-x86_64-unknown-linux-gnu -output=CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o -input=/tmp/icpx-bf7419ac40/CMakeCXXCompilerABI-6e3773.bc -input=/tmp/icpx-bf7419ac40/CMakeCXXCompilerABI-79f171.o -verbose
+        Linking CXX executable cmTC_370f9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_370f9.dir/link.txt --verbose=1
+        /opt/intel/oneapi/compiler/2025.1/bin/icpx  -fsycl   -lpcap -v CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_370f9 
+        Intel(R) oneAPI DPC++/C++ Compiler 2025.1.0 (2025.1.0.20250317)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /opt/intel/oneapi/compiler/2025.1/bin/compiler
+        Configuration file: /opt/intel/oneapi/compiler/2025.1/bin/compiler/../icpx.cfg
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+        /opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o -list 
+        /opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o -list 
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,sycl-spir64-unknown-unknown -input=CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o -output=/tmp/icpx-9f0c695730/CMakeCXXCompilerABI-c877d1.o -output=/tmp/icpx-9f0c695730/CMakeCXXCompilerABI-a6c35c.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-9f0c695730 -verbose
+        Uncompressed bundle.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,sycl-spir64-unknown-unknown -input=CMakeFiles/cmTC_370f9.dir/CMakeCXXCompilerABI.cpp.o -output=/tmp/icpx-9f0c695730/CMakeCXXCompilerABI-fb5528.o -output=/tmp/icpx-9f0c695730/CMakeCXXCompilerABI-52ba57.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-9f0c695730 -verbose
+        Uncompressed bundle.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/spirv-to-ir-wrapper" /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-52ba57.o -o /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-cbb4f5.bc -llvm-spirv-opts "--spirv-preserve-auxdata --spirv-target-env=SPV-IR --spirv-builtin-format=global"
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-link" /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-cbb4f5.bc -o /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-1bd82a.bc --suppress-warnings
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-link" -only-needed /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-1bd82a.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-crt.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-complex.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-complex-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-cmath.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-cmath-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf-bf16.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cassert.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cstring.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-complex.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-complex-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cmath.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cmath-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf-bf16.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-user-wrappers.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-compiler-wrappers.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-stubs.bc -o /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-9c05f5.bc --suppress-warnings
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/sycl-post-link" -O2 -device-globals -properties -spec-const=native -split=auto -emit-only-kernels-as-entry-points -emit-param-info -symbols -emit-exported-symbols -emit-imported-symbols -split-esimd -lower-esimd -o /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-1f0643.table /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-9c05f5.bc
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/file-table-tform" -extract=Code -drop_titles -o /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-e9593a.txt /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-1f0643.table
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-foreach" --in-file-list=/tmp/icpx-9f0c695730/CMakeCXXCompilerABI-e9593a.txt --in-replace=/tmp/icpx-9f0c695730/CMakeCXXCompilerABI-e9593a.txt --out-ext=spv --out-file-list=/tmp/icpx-9f0c695730/CMakeCXXCompilerABI-0f5c34.txt --out-replace=/tmp/icpx-9f0c695730/CMakeCXXCompilerABI-0f5c34.txt --out-dir=/tmp/icpx-9f0c695730 -- /opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-spirv -o /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-0f5c34.txt -spirv-max-version=1.4 -spirv-debug-info-version=nonsemantic-shader-200 -spirv-allow-unknown-intrinsics=llvm.genx. -spirv-allow-unknown-intrinsics=llvm.genx. -spirv-ext=-all,+SPV_EXT_shader_atomic_float_add,+SPV_EXT_shader_atomic_float_min_max,+SPV_KHR_no_integer_wrap_decoration,+SPV_KHR_float_controls,+SPV_KHR_bit_instructions,+SPV_KHR_expect_assume,+SPV_KHR_linkonce_odr,+SPV_INTEL_subgroups,+SPV_INTEL_media_block_io,+SPV_INTEL_device_side_avc_motion_estimation,+SPV_INTEL_fpga_loop_controls,+SPV_INTEL_unstructured_loop_controls,+SPV_INTEL_fpga_reg,+SPV_INTEL_blocking_pipes,+SPV_INTEL_function_pointers,+SPV_INTEL_kernel_attributes,+SPV_INTEL_io_pipes,+SPV_INTEL_inline_assembly,+SPV_INTEL_arbitrary_precision_integers,+SPV_INTEL_float_controls2,+SPV_INTEL_vector_compute,+SPV_INTEL_fast_composite,+SPV_INTEL_arbitrary_precision_fixed_point,+SPV_INTEL_arbitrary_precision_floating_point,+SPV_INTEL_variable_length_array,+SPV_INTEL_fp_fast_math_mode,+SPV_INTEL_long_constant_composite,+SPV_INTEL_arithmetic_fence,+SPV_INTEL_global_variable_decorations,+SPV_INTEL_cache_controls,+SPV_INTEL_fpga_buffer_location,+SPV_INTEL_fpga_argument_interfaces,+SPV_INTEL_fpga_invocation_pipelining_attributes,+SPV_INTEL_fpga_latency_control,+SPV_KHR_shader_clock,+SPV_INTEL_bindless_images,+SPV_INTEL_task_sequence,+SPV_INTEL_optnone,+SPV_INTEL_bfloat16_conversion,+SPV_INTEL_joint_matrix,+SPV_INTEL_hw_thread_queries,+SPV_INTEL_memory_access_aliasing,+SPV_KHR_uniform_group_instructions,+SPV_INTEL_masked_gather_scatter,+SPV_INTEL_tensor_float32_conversion,+SPV_INTEL_optnone,+SPV_KHR_non_semantic_info,+SPV_KHR_cooperative_matrix,+SPV_EXT_shader_atomic_float16_add /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-e9593a.txt
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/file-table-tform" -replace=Code,Code -o /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-14fec1.table /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-1f0643.table /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-0f5c34.txt
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-wrapper" -o=/tmp/icpx-9f0c695730/wrapper-ddbd3f.bc -host=x86_64-unknown-linux-gnu -compile-opts=-ftarget-register-alloc-mode=pvc:-ze-intel-enable-auto-large-GRF-mode -target=spir64 -kind=sycl -batch /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-14fec1.table
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" --target=x86_64-unknown-linux-gnu -c -o /tmp/icpx-9f0c695730/cmTC_370f9-wrapper-86d8bc.o /tmp/icpx-9f0c695730/wrapper-ddbd3f.bc
+         "/usr/bin/ld" -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_370f9 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/lib/clang/20/lib/x86_64-unknown-linux-gnu -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/lib -L/lib -L/usr/lib -L/opt/intel/oneapi/tcm/1.3/lib -L/opt/intel/oneapi/umf/0.10/lib -L/opt/intel/oneapi/tbb/2022.1/env/../lib/intel64/gcc4.8 -L/opt/intel/oneapi/pti/0.11/lib -L/opt/intel/oneapi/mpi/2021.15/lib -L/opt/intel/oneapi/mkl/2025.1/lib -L/opt/intel/oneapi/ippcp/2025.1/lib/ -L/opt/intel/oneapi/ipp/2022.1/lib -L/opt/intel/oneapi/dnnl/2025.1/lib -L/opt/intel/oneapi/dal/2025.4/lib -L/opt/intel/oneapi/compiler/2025.1/lib -L/opt/intel/oneapi/ccl/2021.15/lib/ -lpcap /tmp/icpx-9f0c695730/CMakeCXXCompilerABI-c877d1.o /tmp/icpx-9f0c695730/cmTC_370f9-wrapper-86d8bc.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -lstdc++ -Bstatic -limf -Bdynamic -lm -lgcc_s -lgcc -Bstatic -lirc -Bdynamic -ldl -lgcc_s -lgcc -lsycl -lsycl-devicelib-host -lc -lgcc_s -lgcc -Bstatic -lirc_s -Bdynamic /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+        /usr/bin/ld: cannot find -lpcap: No such file or directory
+        icpx: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_370f9.dir/build.make:100: cmTC_370f9] Error 1
+        gmake[1]: Leaving directory '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-lvJfB4'
+        gmake: *** [Makefile:127: cmTC_370f9/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:13 (project)"
+    checks:
+      - "Check for working CXX compiler: /opt/intel/oneapi/compiler/2025.1/bin/icpx"
+    directories:
+      source: "/challenge/build/CMakeFiles/CMakeScratch/TryCompile-8jio7a"
+      binary: "/challenge/build/CMakeFiles/CMakeScratch/TryCompile-8jio7a"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fsycl"
+      CMAKE_EXE_LINKER_FLAGS: " -lpcap"
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-8jio7a'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5e367/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5e367.dir/build.make CMakeFiles/cmTC_5e367.dir/build
+        gmake[1]: Entering directory '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-8jio7a'
+        Building CXX object CMakeFiles/cmTC_5e367.dir/testCXXCompiler.cxx.o
+        /opt/intel/oneapi/compiler/2025.1/bin/icpx   -fsycl  -MD -MT CMakeFiles/cmTC_5e367.dir/testCXXCompiler.cxx.o -MF CMakeFiles/cmTC_5e367.dir/testCXXCompiler.cxx.o.d -o CMakeFiles/cmTC_5e367.dir/testCXXCompiler.cxx.o -c /challenge/build/CMakeFiles/CMakeScratch/TryCompile-8jio7a/testCXXCompiler.cxx
+        Linking CXX executable cmTC_5e367
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e367.dir/link.txt --verbose=1
+        /opt/intel/oneapi/compiler/2025.1/bin/icpx  -fsycl   -lpcap  CMakeFiles/cmTC_5e367.dir/testCXXCompiler.cxx.o -o cmTC_5e367 
+        /usr/bin/ld: cannot find -lpcap: No such file or directory
+        icpx: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_5e367.dir/build.make:100: cmTC_5e367] Error 1
+        gmake[1]: Leaving directory '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-8jio7a'
+        gmake: *** [Makefile:127: cmTC_5e367/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/intel/oneapi/compiler/2025.1/bin/icpx 
+      Build flags: -fsycl
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is IntelLLVM, found in:
+        /challenge/build/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh"
+      binary: "/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fsycl"
+      CMAKE_EXE_LINKER_FLAGS: " -lpcap"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_32ee9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_32ee9.dir/build.make CMakeFiles/cmTC_32ee9.dir/build
+        gmake[1]: Entering directory '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh'
+        Building CXX object CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/intel/oneapi/compiler/2025.1/bin/icpx   -fsycl    -v -MD -MT CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Intel(R) oneAPI DPC++/C++ Compiler 2025.1.0 (2025.1.0.20250317)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /opt/intel/oneapi/compiler/2025.1/bin/compiler
+        Configuration file: /opt/intel/oneapi/compiler/2025.1/bin/compiler/../icpx.cfg
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" -cc1 -triple spir64-unknown-unknown -aux-triple x86_64-unknown-linux-gnu -fsycl-is-device -fdeclare-spirv-builtins -mllvm -sycl-opt -fenable-sycl-dae -Wno-sycl-strict -fsycl-int-header=/tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-header-5b9009.h -fsycl-int-footer=/tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-footer-edfc3f.h -sycl-std=2020 -ffine-grained-bitfield-accesses -fsycl-unique-prefix=uid0627144ef4ca508d -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -Wspir-compat -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -faltmathlib=LibDeviceIMFAltMathLibrary -mframe-pointer=all -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -complex-range=promoted -mconstructor-aliases -aux-target-cpu x86-64 -debugger-tuning=gdb -fdebug-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh -v -fcoverage-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh -fclang-abi-compat=17 -resource-dir /opt/intel/oneapi/compiler/2025.1/lib/clang/20 -dependency-file CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include -I/opt/intel/oneapi/umf/0.10/include -I/opt/intel/oneapi/tbb/2022.1/env/../include -I/opt/intel/oneapi/pti/0.11/include -I/opt/intel/oneapi/mpi/2021.15/include -I/opt/intel/oneapi/mkl/2025.1/include -I/opt/intel/oneapi/ippcp/2025.1/include -I/opt/intel/oneapi/ipp/2022.1/include -I/opt/intel/oneapi/dpl/2022.8/include -I/opt/intel/oneapi/dpcpp-ct/2025.1/include -I/opt/intel/oneapi/dnnl/2025.1/include -I/opt/intel/oneapi/dev-utilities/2025.1/include -I/opt/intel/oneapi/dal/2025.4/include -I/opt/intel/oneapi/dal/2025.4/include/dal -I/opt/intel/oneapi/ccl/2021.15/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fgpu-rdc -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -mllvm -disable-hir-generate-mkl-call -mllvm -intel-abi-compatible=true -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-compatibility-disable=FakeLoad -fintel-libirc-allowed -fintel-libimf-allowed -o /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-9329a5.bc -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward"
+        ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"
+        ignoring duplicate directory "/usr/local/include"
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu"
+        ignoring duplicate directory "/usr/include"
+        ignoring duplicate directory "/usr/local/include"
+        ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"
+        ignoring duplicate directory "/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/intel/oneapi/umf/0.10/include
+         /opt/intel/oneapi/tbb/2022.1/env/../include
+         /opt/intel/oneapi/pti/0.11/include
+         /opt/intel/oneapi/mpi/2021.15/include
+         /opt/intel/oneapi/mkl/2025.1/include
+         /opt/intel/oneapi/ippcp/2025.1/include
+         /opt/intel/oneapi/ipp/2022.1/include
+         /opt/intel/oneapi/dpl/2022.8/include
+         /opt/intel/oneapi/dpcpp-ct/2025.1/include
+         /opt/intel/oneapi/dnnl/2025.1/include
+         /opt/intel/oneapi/dev-utilities/2025.1/include
+         /opt/intel/oneapi/dal/2025.4/include
+         /opt/intel/oneapi/dal/2025.4/include/dal
+         /opt/intel/oneapi/ccl/2021.15/include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward
+         /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" -cc1 -triple x86_64-unknown-linux-gnu -fsycl-is-host -include-internal-header /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-header-5b9009.h -dependency-filter /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-header-5b9009.h -fsycl-enable-int-header-diags -include-internal-footer /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-footer-edfc3f.h -dependency-filter /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-footer-edfc3f.h -sycl-std=2020 -fsycl-unique-prefix=uid0627144ef4ca508d -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -faltmathlib=SVMLAltMathLibrary -mframe-pointer=none -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -complex-range=promoted -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic --dependent-lib=sycl-devicelib-host -debugger-tuning=gdb -fdebug-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh -v -fcoverage-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh -fclang-abi-compat=17 -resource-dir /opt/intel/oneapi/compiler/2025.1/lib/clang/20 -dependency-file CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include -I/opt/intel/oneapi/umf/0.10/include -I/opt/intel/oneapi/tbb/2022.1/env/../include -I/opt/intel/oneapi/pti/0.11/include -I/opt/intel/oneapi/mpi/2021.15/include -I/opt/intel/oneapi/mkl/2025.1/include -I/opt/intel/oneapi/ippcp/2025.1/include -I/opt/intel/oneapi/ipp/2022.1/include -I/opt/intel/oneapi/dpl/2022.8/include -I/opt/intel/oneapi/dpcpp-ct/2025.1/include -I/opt/intel/oneapi/dnnl/2025.1/include -I/opt/intel/oneapi/dev-utilities/2025.1/include -I/opt/intel/oneapi/dal/2025.4/include -I/opt/intel/oneapi/dal/2025.4/include/dal -I/opt/intel/oneapi/ccl/2021.15/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fgpu-rdc -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -mllvm -disable-hir-generate-mkl-call -mllvm -sycl-host -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -fintel-libimf-allowed -o /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-0b9498.o -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13"
+        ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward"
+        ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"
+        ignoring duplicate directory "/usr/local/include"
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu"
+        ignoring duplicate directory "/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/intel/oneapi/umf/0.10/include
+         /opt/intel/oneapi/tbb/2022.1/env/../include
+         /opt/intel/oneapi/pti/0.11/include
+         /opt/intel/oneapi/mpi/2021.15/include
+         /opt/intel/oneapi/mkl/2025.1/include
+         /opt/intel/oneapi/ippcp/2025.1/include
+         /opt/intel/oneapi/ipp/2022.1/include
+         /opt/intel/oneapi/dpl/2022.8/include
+         /opt/intel/oneapi/dpcpp-ct/2025.1/include
+         /opt/intel/oneapi/dnnl/2025.1/include
+         /opt/intel/oneapi/dev-utilities/2025.1/include
+         /opt/intel/oneapi/dal/2025.4/include
+         /opt/intel/oneapi/dal/2025.4/include/dal
+         /opt/intel/oneapi/ccl/2021.15/include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include
+         /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13
+         /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward
+         /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown,host-x86_64-unknown-linux-gnu -output=CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -input=/tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-9329a5.bc -input=/tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-0b9498.o -verbose
+        Linking CXX executable cmTC_32ee9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32ee9.dir/link.txt --verbose=1
+        /opt/intel/oneapi/compiler/2025.1/bin/icpx  -fsycl   -lpcap -v CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_32ee9 
+        Intel(R) oneAPI DPC++/C++ Compiler 2025.1.0 (2025.1.0.20250317)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /opt/intel/oneapi/compiler/2025.1/bin/compiler
+        Configuration file: /opt/intel/oneapi/compiler/2025.1/bin/compiler/../icpx.cfg
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+        /opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -list 
+        /opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -list 
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,sycl-spir64-unknown-unknown -input=CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -output=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-d5ce29.o -output=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-ce1444.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-86391b0072 -verbose
+        Uncompressed bundle.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,sycl-spir64-unknown-unknown -input=CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -output=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-e50e67.o -output=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-0ab976.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-86391b0072 -verbose
+        Uncompressed bundle.
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/spirv-to-ir-wrapper" /tmp/icpx-86391b0072/CMakeCXXCompilerABI-0ab976.o -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-060b66.bc -llvm-spirv-opts "--spirv-preserve-auxdata --spirv-target-env=SPV-IR --spirv-builtin-format=global"
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-link" /tmp/icpx-86391b0072/CMakeCXXCompilerABI-060b66.bc -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-a3b72d.bc --suppress-warnings
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-link" -only-needed /tmp/icpx-86391b0072/CMakeCXXCompilerABI-a3b72d.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-crt.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-complex.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-complex-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-cmath.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-cmath-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf-bf16.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cassert.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cstring.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-complex.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-complex-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cmath.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cmath-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf-bf16.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-user-wrappers.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-compiler-wrappers.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-stubs.bc -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-0eb13f.bc --suppress-warnings
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/sycl-post-link" -O2 -device-globals -properties -spec-const=native -split=auto -emit-only-kernels-as-entry-points -emit-param-info -symbols -emit-exported-symbols -emit-imported-symbols -split-esimd -lower-esimd -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-6156fb.table /tmp/icpx-86391b0072/CMakeCXXCompilerABI-0eb13f.bc
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/file-table-tform" -extract=Code -drop_titles -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-d0589c.txt /tmp/icpx-86391b0072/CMakeCXXCompilerABI-6156fb.table
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-foreach" --in-file-list=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-d0589c.txt --in-replace=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-d0589c.txt --out-ext=spv --out-file-list=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-f93f49.txt --out-replace=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-f93f49.txt --out-dir=/tmp/icpx-86391b0072 -- /opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-spirv -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-f93f49.txt -spirv-max-version=1.4 -spirv-debug-info-version=nonsemantic-shader-200 -spirv-allow-unknown-intrinsics=llvm.genx. -spirv-allow-unknown-intrinsics=llvm.genx. -spirv-ext=-all,+SPV_EXT_shader_atomic_float_add,+SPV_EXT_shader_atomic_float_min_max,+SPV_KHR_no_integer_wrap_decoration,+SPV_KHR_float_controls,+SPV_KHR_bit_instructions,+SPV_KHR_expect_assume,+SPV_KHR_linkonce_odr,+SPV_INTEL_subgroups,+SPV_INTEL_media_block_io,+SPV_INTEL_device_side_avc_motion_estimation,+SPV_INTEL_fpga_loop_controls,+SPV_INTEL_unstructured_loop_controls,+SPV_INTEL_fpga_reg,+SPV_INTEL_blocking_pipes,+SPV_INTEL_function_pointers,+SPV_INTEL_kernel_attributes,+SPV_INTEL_io_pipes,+SPV_INTEL_inline_assembly,+SPV_INTEL_arbitrary_precision_integers,+SPV_INTEL_float_controls2,+SPV_INTEL_vector_compute,+SPV_INTEL_fast_composite,+SPV_INTEL_arbitrary_precision_fixed_point,+SPV_INTEL_arbitrary_precision_floating_point,+SPV_INTEL_variable_length_array,+SPV_INTEL_fp_fast_math_mode,+SPV_INTEL_long_constant_composite,+SPV_INTEL_arithmetic_fence,+SPV_INTEL_global_variable_decorations,+SPV_INTEL_cache_controls,+SPV_INTEL_fpga_buffer_location,+SPV_INTEL_fpga_argument_interfaces,+SPV_INTEL_fpga_invocation_pipelining_attributes,+SPV_INTEL_fpga_latency_control,+SPV_KHR_shader_clock,+SPV_INTEL_bindless_images,+SPV_INTEL_task_sequence,+SPV_INTEL_optnone,+SPV_INTEL_bfloat16_conversion,+SPV_INTEL_joint_matrix,+SPV_INTEL_hw_thread_queries,+SPV_INTEL_memory_access_aliasing,+SPV_KHR_uniform_group_instructions,+SPV_INTEL_masked_gather_scatter,+SPV_INTEL_tensor_float32_conversion,+SPV_INTEL_optnone,+SPV_KHR_non_semantic_info,+SPV_KHR_cooperative_matrix,+SPV_EXT_shader_atomic_float16_add /tmp/icpx-86391b0072/CMakeCXXCompilerABI-d0589c.txt
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/file-table-tform" -replace=Code,Code -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-5fd06f.table /tmp/icpx-86391b0072/CMakeCXXCompilerABI-6156fb.table /tmp/icpx-86391b0072/CMakeCXXCompilerABI-f93f49.txt
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-wrapper" -o=/tmp/icpx-86391b0072/wrapper-9e1e41.bc -host=x86_64-unknown-linux-gnu -compile-opts=-ftarget-register-alloc-mode=pvc:-ze-intel-enable-auto-large-GRF-mode -target=spir64 -kind=sycl -batch /tmp/icpx-86391b0072/CMakeCXXCompilerABI-5fd06f.table
+         "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" --target=x86_64-unknown-linux-gnu -c -o /tmp/icpx-86391b0072/cmTC_32ee9-wrapper-e6d980.o /tmp/icpx-86391b0072/wrapper-9e1e41.bc
+         "/usr/bin/ld" -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_32ee9 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/lib/clang/20/lib/x86_64-unknown-linux-gnu -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/lib -L/lib -L/usr/lib -L/opt/intel/oneapi/tcm/1.3/lib -L/opt/intel/oneapi/umf/0.10/lib -L/opt/intel/oneapi/tbb/2022.1/env/../lib/intel64/gcc4.8 -L/opt/intel/oneapi/pti/0.11/lib -L/opt/intel/oneapi/mpi/2021.15/lib -L/opt/intel/oneapi/mkl/2025.1/lib -L/opt/intel/oneapi/ippcp/2025.1/lib/ -L/opt/intel/oneapi/ipp/2022.1/lib -L/opt/intel/oneapi/dnnl/2025.1/lib -L/opt/intel/oneapi/dal/2025.4/lib -L/opt/intel/oneapi/compiler/2025.1/lib -L/opt/intel/oneapi/ccl/2021.15/lib/ -lpcap /tmp/icpx-86391b0072/CMakeCXXCompilerABI-d5ce29.o /tmp/icpx-86391b0072/cmTC_32ee9-wrapper-e6d980.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -lstdc++ -Bstatic -limf -Bdynamic -lm -lgcc_s -lgcc -Bstatic -lirc -Bdynamic -ldl -lgcc_s -lgcc -lsycl -lsycl-devicelib-host -lc -lgcc_s -lgcc -Bstatic -lirc_s -Bdynamic /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+        gmake[1]: Leaving directory '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/intel/oneapi/umf/0.10/include]
+          add: [/opt/intel/oneapi/tbb/2022.1/env/../include]
+          add: [/opt/intel/oneapi/pti/0.11/include]
+          add: [/opt/intel/oneapi/mpi/2021.15/include]
+          add: [/opt/intel/oneapi/mkl/2025.1/include]
+          add: [/opt/intel/oneapi/ippcp/2025.1/include]
+          add: [/opt/intel/oneapi/ipp/2022.1/include]
+          add: [/opt/intel/oneapi/dpl/2022.8/include]
+          add: [/opt/intel/oneapi/dpcpp-ct/2025.1/include]
+          add: [/opt/intel/oneapi/dnnl/2025.1/include]
+          add: [/opt/intel/oneapi/dev-utilities/2025.1/include]
+          add: [/opt/intel/oneapi/dal/2025.4/include]
+          add: [/opt/intel/oneapi/dal/2025.4/include/dal]
+          add: [/opt/intel/oneapi/ccl/2021.15/include]
+          add: [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers]
+          add: [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include]
+          add: [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward]
+          add: [/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/intel/oneapi/umf/0.10/include] ==> [/opt/intel/oneapi/umf/0.10/include]
+        collapse include dir [/opt/intel/oneapi/tbb/2022.1/env/../include] ==> [/opt/intel/oneapi/tbb/2022.1/include]
+        collapse include dir [/opt/intel/oneapi/pti/0.11/include] ==> [/opt/intel/oneapi/pti/0.11/include]
+        collapse include dir [/opt/intel/oneapi/mpi/2021.15/include] ==> [/opt/intel/oneapi/mpi/2021.15/include]
+        collapse include dir [/opt/intel/oneapi/mkl/2025.1/include] ==> [/opt/intel/oneapi/mkl/2025.1/include]
+        collapse include dir [/opt/intel/oneapi/ippcp/2025.1/include] ==> [/opt/intel/oneapi/ippcp/2025.1/include]
+        collapse include dir [/opt/intel/oneapi/ipp/2022.1/include] ==> [/opt/intel/oneapi/ipp/2022.1/include]
+        collapse include dir [/opt/intel/oneapi/dpl/2022.8/include] ==> [/opt/intel/oneapi/dpl/2022.8/include]
+        collapse include dir [/opt/intel/oneapi/dpcpp-ct/2025.1/include] ==> [/opt/intel/oneapi/dpcpp-ct/2025.1/include]
+        collapse include dir [/opt/intel/oneapi/dnnl/2025.1/include] ==> [/opt/intel/oneapi/dnnl/2025.1/include]
+        collapse include dir [/opt/intel/oneapi/dev-utilities/2025.1/include] ==> [/opt/intel/oneapi/dev-utilities/2025.1/include]
+        collapse include dir [/opt/intel/oneapi/dal/2025.4/include] ==> [/opt/intel/oneapi/dal/2025.4/include]
+        collapse include dir [/opt/intel/oneapi/dal/2025.4/include/dal] ==> [/opt/intel/oneapi/dal/2025.4/include/dal]
+        collapse include dir [/opt/intel/oneapi/ccl/2021.15/include] ==> [/opt/intel/oneapi/ccl/2021.15/include]
+        collapse include dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers] ==> [/opt/intel/oneapi/compiler/2025.1/include/sycl/stl_wrappers]
+        collapse include dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include] ==> [/opt/intel/oneapi/compiler/2025.1/include]
+        collapse include dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include] ==> [/opt/intel/oneapi/compiler/2025.1/opt/compiler/include]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13] ==> [/usr/include/c++/13]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13] ==> [/usr/include/x86_64-linux-gnu/c++/13]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward] ==> [/usr/include/c++/13/backward]
+        collapse include dir [/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include] ==> [/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/intel/oneapi/umf/0.10/include;/opt/intel/oneapi/tbb/2022.1/include;/opt/intel/oneapi/pti/0.11/include;/opt/intel/oneapi/mpi/2021.15/include;/opt/intel/oneapi/mkl/2025.1/include;/opt/intel/oneapi/ippcp/2025.1/include;/opt/intel/oneapi/ipp/2022.1/include;/opt/intel/oneapi/dpl/2022.8/include;/opt/intel/oneapi/dpcpp-ct/2025.1/include;/opt/intel/oneapi/dnnl/2025.1/include;/opt/intel/oneapi/dev-utilities/2025.1/include;/opt/intel/oneapi/dal/2025.4/include;/opt/intel/oneapi/dal/2025.4/include/dal;/opt/intel/oneapi/ccl/2021.15/include;/opt/intel/oneapi/compiler/2025.1/include/sycl/stl_wrappers;/opt/intel/oneapi/compiler/2025.1/include;/opt/intel/oneapi/compiler/2025.1/opt/compiler/include;/usr/include/c++/13;/usr/include/x86_64-linux-gnu/c++/13;/usr/include/c++/13/backward;/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_32ee9/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_32ee9.dir/build.make CMakeFiles/cmTC_32ee9.dir/build]
+        ignore line: [gmake[1]: Entering directory '/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh']
+        ignore line: [Building CXX object CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/opt/intel/oneapi/compiler/2025.1/bin/icpx   -fsycl    -v -MD -MT CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Intel(R) oneAPI DPC++/C++ Compiler 2025.1.0 (2025.1.0.20250317)]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/intel/oneapi/compiler/2025.1/bin/compiler]
+        ignore line: [Configuration file: /opt/intel/oneapi/compiler/2025.1/bin/compiler/../icpx.cfg]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13]
+        ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" -cc1 -triple spir64-unknown-unknown -aux-triple x86_64-unknown-linux-gnu -fsycl-is-device -fdeclare-spirv-builtins -mllvm -sycl-opt -fenable-sycl-dae -Wno-sycl-strict -fsycl-int-header=/tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-header-5b9009.h -fsycl-int-footer=/tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-footer-edfc3f.h -sycl-std=2020 -ffine-grained-bitfield-accesses -fsycl-unique-prefix=uid0627144ef4ca508d -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -Wspir-compat -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -faltmathlib=LibDeviceIMFAltMathLibrary -mframe-pointer=all -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign preserve-sign -ffp-contract=fast -fno-rounding-math -complex-range=promoted -mconstructor-aliases -aux-target-cpu x86-64 -debugger-tuning=gdb -fdebug-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh -v -fcoverage-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh -fclang-abi-compat=17 -resource-dir /opt/intel/oneapi/compiler/2025.1/lib/clang/20 -dependency-file CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include -I/opt/intel/oneapi/umf/0.10/include -I/opt/intel/oneapi/tbb/2022.1/env/../include -I/opt/intel/oneapi/pti/0.11/include -I/opt/intel/oneapi/mpi/2021.15/include -I/opt/intel/oneapi/mkl/2025.1/include -I/opt/intel/oneapi/ippcp/2025.1/include -I/opt/intel/oneapi/ipp/2022.1/include -I/opt/intel/oneapi/dpl/2022.8/include -I/opt/intel/oneapi/dpcpp-ct/2025.1/include -I/opt/intel/oneapi/dnnl/2025.1/include -I/opt/intel/oneapi/dev-utilities/2025.1/include -I/opt/intel/oneapi/dal/2025.4/include -I/opt/intel/oneapi/dal/2025.4/include/dal -I/opt/intel/oneapi/ccl/2021.15/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fgpu-rdc -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -mllvm -disable-hir-generate-mkl-call -mllvm -intel-abi-compatible=true -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-compatibility-disable=FakeLoad -fintel-libirc-allowed -fintel-libimf-allowed -o /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-9329a5.bc -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13"]
+        ignore line: [ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13"]
+        ignore line: [ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward"]
+        ignore line: [ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"]
+        ignore line: [ignoring duplicate directory "/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu"]
+        ignore line: [ignoring duplicate directory "/usr/include"]
+        ignore line: [ignoring duplicate directory "/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"]
+        ignore line: [ignoring duplicate directory "/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/intel/oneapi/umf/0.10/include]
+        ignore line: [ /opt/intel/oneapi/tbb/2022.1/env/../include]
+        ignore line: [ /opt/intel/oneapi/pti/0.11/include]
+        ignore line: [ /opt/intel/oneapi/mpi/2021.15/include]
+        ignore line: [ /opt/intel/oneapi/mkl/2025.1/include]
+        ignore line: [ /opt/intel/oneapi/ippcp/2025.1/include]
+        ignore line: [ /opt/intel/oneapi/ipp/2022.1/include]
+        ignore line: [ /opt/intel/oneapi/dpl/2022.8/include]
+        ignore line: [ /opt/intel/oneapi/dpcpp-ct/2025.1/include]
+        ignore line: [ /opt/intel/oneapi/dnnl/2025.1/include]
+        ignore line: [ /opt/intel/oneapi/dev-utilities/2025.1/include]
+        ignore line: [ /opt/intel/oneapi/dal/2025.4/include]
+        ignore line: [ /opt/intel/oneapi/dal/2025.4/include/dal]
+        ignore line: [ /opt/intel/oneapi/ccl/2021.15/include]
+        ignore line: [ /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers]
+        ignore line: [ /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include]
+        ignore line: [ /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward]
+        ignore line: [ /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" -cc1 -triple x86_64-unknown-linux-gnu -fsycl-is-host -include-internal-header /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-header-5b9009.h -dependency-filter /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-header-5b9009.h -fsycl-enable-int-header-diags -include-internal-footer /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-footer-edfc3f.h -dependency-filter /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-footer-edfc3f.h -sycl-std=2020 -fsycl-unique-prefix=uid0627144ef4ca508d -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -faltmathlib=SVMLAltMathLibrary -mframe-pointer=none -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign preserve-sign -ffp-contract=fast -fno-rounding-math -complex-range=promoted -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic --dependent-lib=sycl-devicelib-host -debugger-tuning=gdb -fdebug-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh -v -fcoverage-compilation-dir=/challenge/build/CMakeFiles/CMakeScratch/TryCompile-sBytRh -fclang-abi-compat=17 -resource-dir /opt/intel/oneapi/compiler/2025.1/lib/clang/20 -dependency-file CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include -I/opt/intel/oneapi/umf/0.10/include -I/opt/intel/oneapi/tbb/2022.1/env/../include -I/opt/intel/oneapi/pti/0.11/include -I/opt/intel/oneapi/mpi/2021.15/include -I/opt/intel/oneapi/mkl/2025.1/include -I/opt/intel/oneapi/ippcp/2025.1/include -I/opt/intel/oneapi/ipp/2022.1/include -I/opt/intel/oneapi/dpl/2022.8/include -I/opt/intel/oneapi/dpcpp-ct/2025.1/include -I/opt/intel/oneapi/dnnl/2025.1/include -I/opt/intel/oneapi/dev-utilities/2025.1/include -I/opt/intel/oneapi/dal/2025.4/include -I/opt/intel/oneapi/dal/2025.4/include/dal -I/opt/intel/oneapi/ccl/2021.15/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fgpu-rdc -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -mllvm -disable-hir-generate-mkl-call -mllvm -sycl-host -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -fintel-libimf-allowed -o /tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-0b9498.o -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13"]
+        ignore line: [ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13"]
+        ignore line: [ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward"]
+        ignore line: [ignoring duplicate directory "/opt/intel/oneapi/compiler/2025.1/lib/clang/20/include"]
+        ignore line: [ignoring duplicate directory "/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu"]
+        ignore line: [ignoring duplicate directory "/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/intel/oneapi/umf/0.10/include]
+        ignore line: [ /opt/intel/oneapi/tbb/2022.1/env/../include]
+        ignore line: [ /opt/intel/oneapi/pti/0.11/include]
+        ignore line: [ /opt/intel/oneapi/mpi/2021.15/include]
+        ignore line: [ /opt/intel/oneapi/mkl/2025.1/include]
+        ignore line: [ /opt/intel/oneapi/ippcp/2025.1/include]
+        ignore line: [ /opt/intel/oneapi/ipp/2022.1/include]
+        ignore line: [ /opt/intel/oneapi/dpl/2022.8/include]
+        ignore line: [ /opt/intel/oneapi/dpcpp-ct/2025.1/include]
+        ignore line: [ /opt/intel/oneapi/dnnl/2025.1/include]
+        ignore line: [ /opt/intel/oneapi/dev-utilities/2025.1/include]
+        ignore line: [ /opt/intel/oneapi/dal/2025.4/include]
+        ignore line: [ /opt/intel/oneapi/dal/2025.4/include/dal]
+        ignore line: [ /opt/intel/oneapi/ccl/2021.15/include]
+        ignore line: [ /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include/sycl/stl_wrappers]
+        ignore line: [ /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../include]
+        ignore line: [ /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/include]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward]
+        ignore line: [ /opt/intel/oneapi/compiler/2025.1/lib/clang/20/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown host-x86_64-unknown-linux-gnu -output=CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -input=/tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-9329a5.bc -input=/tmp/icpx-0ed6e60d03/CMakeCXXCompilerABI-0b9498.o -verbose]
+        ignore line: [Linking CXX executable cmTC_32ee9]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32ee9.dir/link.txt --verbose=1]
+        ignore line: [/opt/intel/oneapi/compiler/2025.1/bin/icpx  -fsycl   -lpcap -v CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_32ee9 ]
+        ignore line: [Intel(R) oneAPI DPC++/C++ Compiler 2025.1.0 (2025.1.0.20250317)]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/intel/oneapi/compiler/2025.1/bin/compiler]
+        ignore line: [Configuration file: /opt/intel/oneapi/compiler/2025.1/bin/compiler/../icpx.cfg]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13]
+        ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -list ]
+        ignore line: [/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -list ]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu sycl-spir64-unknown-unknown -input=CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -output=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-d5ce29.o -output=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-ce1444.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-86391b0072 -verbose]
+        ignore line: [Uncompressed bundle.]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu sycl-spir64-unknown-unknown -input=CMakeFiles/cmTC_32ee9.dir/CMakeCXXCompilerABI.cpp.o -output=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-e50e67.o -output=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-0ab976.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-86391b0072 -verbose]
+        ignore line: [Uncompressed bundle.]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/spirv-to-ir-wrapper" /tmp/icpx-86391b0072/CMakeCXXCompilerABI-0ab976.o -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-060b66.bc -llvm-spirv-opts "--spirv-preserve-auxdata --spirv-target-env=SPV-IR --spirv-builtin-format=global"]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-link" /tmp/icpx-86391b0072/CMakeCXXCompilerABI-060b66.bc -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-a3b72d.bc --suppress-warnings]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-link" -only-needed /tmp/icpx-86391b0072/CMakeCXXCompilerABI-a3b72d.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-crt.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-complex.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-complex-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-cmath.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-cmath-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-imf-bf16.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cassert.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cstring.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-complex.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-complex-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cmath.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-cmath-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf-fp64.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-fallback-imf-bf16.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-user-wrappers.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-compiler-wrappers.bc /opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib/libsycl-itt-stubs.bc -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-0eb13f.bc --suppress-warnings]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/sycl-post-link" -O2 -device-globals -properties -spec-const=native -split=auto -emit-only-kernels-as-entry-points -emit-param-info -symbols -emit-exported-symbols -emit-imported-symbols -split-esimd -lower-esimd -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-6156fb.table /tmp/icpx-86391b0072/CMakeCXXCompilerABI-0eb13f.bc]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/file-table-tform" -extract=Code -drop_titles -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-d0589c.txt /tmp/icpx-86391b0072/CMakeCXXCompilerABI-6156fb.table]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-foreach" --in-file-list=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-d0589c.txt --in-replace=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-d0589c.txt --out-ext=spv --out-file-list=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-f93f49.txt --out-replace=/tmp/icpx-86391b0072/CMakeCXXCompilerABI-f93f49.txt --out-dir=/tmp/icpx-86391b0072 -- /opt/intel/oneapi/compiler/2025.1/bin/compiler/llvm-spirv -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-f93f49.txt -spirv-max-version=1.4 -spirv-debug-info-version=nonsemantic-shader-200 -spirv-allow-unknown-intrinsics=llvm.genx. -spirv-allow-unknown-intrinsics=llvm.genx. -spirv-ext=-all +SPV_EXT_shader_atomic_float_add +SPV_EXT_shader_atomic_float_min_max +SPV_KHR_no_integer_wrap_decoration +SPV_KHR_float_controls +SPV_KHR_bit_instructions +SPV_KHR_expect_assume +SPV_KHR_linkonce_odr +SPV_INTEL_subgroups +SPV_INTEL_media_block_io +SPV_INTEL_device_side_avc_motion_estimation +SPV_INTEL_fpga_loop_controls +SPV_INTEL_unstructured_loop_controls +SPV_INTEL_fpga_reg +SPV_INTEL_blocking_pipes +SPV_INTEL_function_pointers +SPV_INTEL_kernel_attributes +SPV_INTEL_io_pipes +SPV_INTEL_inline_assembly +SPV_INTEL_arbitrary_precision_integers +SPV_INTEL_float_controls2 +SPV_INTEL_vector_compute +SPV_INTEL_fast_composite +SPV_INTEL_arbitrary_precision_fixed_point +SPV_INTEL_arbitrary_precision_floating_point +SPV_INTEL_variable_length_array +SPV_INTEL_fp_fast_math_mode +SPV_INTEL_long_constant_composite +SPV_INTEL_arithmetic_fence +SPV_INTEL_global_variable_decorations +SPV_INTEL_cache_controls +SPV_INTEL_fpga_buffer_location +SPV_INTEL_fpga_argument_interfaces +SPV_INTEL_fpga_invocation_pipelining_attributes +SPV_INTEL_fpga_latency_control +SPV_KHR_shader_clock +SPV_INTEL_bindless_images +SPV_INTEL_task_sequence +SPV_INTEL_optnone +SPV_INTEL_bfloat16_conversion +SPV_INTEL_joint_matrix +SPV_INTEL_hw_thread_queries +SPV_INTEL_memory_access_aliasing +SPV_KHR_uniform_group_instructions +SPV_INTEL_masked_gather_scatter +SPV_INTEL_tensor_float32_conversion +SPV_INTEL_optnone +SPV_KHR_non_semantic_info +SPV_KHR_cooperative_matrix +SPV_EXT_shader_atomic_float16_add /tmp/icpx-86391b0072/CMakeCXXCompilerABI-d0589c.txt]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/file-table-tform" -replace=Code Code -o /tmp/icpx-86391b0072/CMakeCXXCompilerABI-5fd06f.table /tmp/icpx-86391b0072/CMakeCXXCompilerABI-6156fb.table /tmp/icpx-86391b0072/CMakeCXXCompilerABI-f93f49.txt]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang-offload-wrapper" -o=/tmp/icpx-86391b0072/wrapper-9e1e41.bc -host=x86_64-unknown-linux-gnu -compile-opts=-ftarget-register-alloc-mode=pvc:-ze-intel-enable-auto-large-GRF-mode -target=spir64 -kind=sycl -batch /tmp/icpx-86391b0072/CMakeCXXCompilerABI-5fd06f.table]
+        ignore line: [ "/opt/intel/oneapi/compiler/2025.1/bin/compiler/clang" --target=x86_64-unknown-linux-gnu -c -o /tmp/icpx-86391b0072/cmTC_32ee9-wrapper-e6d980.o /tmp/icpx-86391b0072/wrapper-9e1e41.bc]
+        link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_32ee9 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/lib/clang/20/lib/x86_64-unknown-linux-gnu -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib -L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/lib -L/lib -L/usr/lib -L/opt/intel/oneapi/tcm/1.3/lib -L/opt/intel/oneapi/umf/0.10/lib -L/opt/intel/oneapi/tbb/2022.1/env/../lib/intel64/gcc4.8 -L/opt/intel/oneapi/pti/0.11/lib -L/opt/intel/oneapi/mpi/2021.15/lib -L/opt/intel/oneapi/mkl/2025.1/lib -L/opt/intel/oneapi/ippcp/2025.1/lib/ -L/opt/intel/oneapi/ipp/2022.1/lib -L/opt/intel/oneapi/dnnl/2025.1/lib -L/opt/intel/oneapi/dal/2025.4/lib -L/opt/intel/oneapi/compiler/2025.1/lib -L/opt/intel/oneapi/ccl/2021.15/lib/ -lpcap /tmp/icpx-86391b0072/CMakeCXXCompilerABI-d5ce29.o /tmp/icpx-86391b0072/cmTC_32ee9-wrapper-e6d980.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -lstdc++ -Bstatic -limf -Bdynamic -lm -lgcc_s -lgcc -Bstatic -lirc -Bdynamic -ldl -lgcc_s -lgcc -lsycl -lsycl-devicelib-host -lc -lgcc_s -lgcc -Bstatic -lirc_s -Bdynamic /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_32ee9] ==> ignore
+          arg [/lib/x86_64-linux-gnu/Scrt1.o] ==> obj [/lib/x86_64-linux-gnu/Scrt1.o]
+          arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib] ==> dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib]
+          arg [-L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib] ==> dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib]
+          arg [-L/opt/intel/oneapi/compiler/2025.1/lib/clang/20/lib/x86_64-unknown-linux-gnu] ==> dir [/opt/intel/oneapi/compiler/2025.1/lib/clang/20/lib/x86_64-unknown-linux-gnu]
+          arg [-L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib] ==> dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib64]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib] ==> dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib]
+          arg [-L/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/lib] ==> dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/lib]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-L/opt/intel/oneapi/tcm/1.3/lib] ==> dir [/opt/intel/oneapi/tcm/1.3/lib]
+          arg [-L/opt/intel/oneapi/umf/0.10/lib] ==> dir [/opt/intel/oneapi/umf/0.10/lib]
+          arg [-L/opt/intel/oneapi/tbb/2022.1/env/../lib/intel64/gcc4.8] ==> dir [/opt/intel/oneapi/tbb/2022.1/env/../lib/intel64/gcc4.8]
+          arg [-L/opt/intel/oneapi/pti/0.11/lib] ==> dir [/opt/intel/oneapi/pti/0.11/lib]
+          arg [-L/opt/intel/oneapi/mpi/2021.15/lib] ==> dir [/opt/intel/oneapi/mpi/2021.15/lib]
+          arg [-L/opt/intel/oneapi/mkl/2025.1/lib] ==> dir [/opt/intel/oneapi/mkl/2025.1/lib]
+          arg [-L/opt/intel/oneapi/ippcp/2025.1/lib/] ==> dir [/opt/intel/oneapi/ippcp/2025.1/lib/]
+          arg [-L/opt/intel/oneapi/ipp/2022.1/lib] ==> dir [/opt/intel/oneapi/ipp/2022.1/lib]
+          arg [-L/opt/intel/oneapi/dnnl/2025.1/lib] ==> dir [/opt/intel/oneapi/dnnl/2025.1/lib]
+          arg [-L/opt/intel/oneapi/dal/2025.4/lib] ==> dir [/opt/intel/oneapi/dal/2025.4/lib]
+          arg [-L/opt/intel/oneapi/compiler/2025.1/lib] ==> dir [/opt/intel/oneapi/compiler/2025.1/lib]
+          arg [-L/opt/intel/oneapi/ccl/2021.15/lib/] ==> dir [/opt/intel/oneapi/ccl/2021.15/lib/]
+          arg [-lpcap] ==> lib [pcap]
+          arg [/tmp/icpx-86391b0072/CMakeCXXCompilerABI-d5ce29.o] ==> obj [/tmp/icpx-86391b0072/CMakeCXXCompilerABI-d5ce29.o]
+          arg [/tmp/icpx-86391b0072/cmTC_32ee9-wrapper-e6d980.o] ==> obj [/tmp/icpx-86391b0072/cmTC_32ee9-wrapper-e6d980.o]
+          arg [-Bstatic] ==> search static
+          arg [-lsvml] ==> lib [svml]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-Bstatic] ==> search static
+          arg [-lirng] ==> lib [irng]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-Bstatic] ==> search static
+          arg [-limf] ==> lib [imf]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-Bstatic] ==> search static
+          arg [-lirc] ==> lib [irc]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-ldl] ==> lib [dl]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lsycl] ==> lib [sycl]
+          arg [-lsycl-devicelib-host] ==> lib [sycl-devicelib-host]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-Bstatic] ==> search static
+          arg [-lirc_s] ==> lib [irc_s]
+          arg [-Bdynamic] ==> search dynamic
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib] ==> [/opt/intel/oneapi/compiler/2025.1/lib]
+        collapse library dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib] ==> [/opt/intel/oneapi/compiler/2025.1/lib]
+        collapse library dir [/opt/intel/oneapi/compiler/2025.1/lib/clang/20/lib/x86_64-unknown-linux-gnu] ==> [/opt/intel/oneapi/compiler/2025.1/lib/clang/20/lib/x86_64-unknown-linux-gnu]
+        collapse library dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib] ==> [/opt/intel/oneapi/compiler/2025.1/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../lib] ==> [/opt/intel/oneapi/compiler/2025.1/lib]
+        collapse library dir [/opt/intel/oneapi/compiler/2025.1/bin/compiler/../../opt/compiler/lib] ==> [/opt/intel/oneapi/compiler/2025.1/opt/compiler/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        collapse library dir [/opt/intel/oneapi/tcm/1.3/lib] ==> [/opt/intel/oneapi/tcm/1.3/lib]
+        collapse library dir [/opt/intel/oneapi/umf/0.10/lib] ==> [/opt/intel/oneapi/umf/0.10/lib]
+        collapse library dir [/opt/intel/oneapi/tbb/2022.1/env/../lib/intel64/gcc4.8] ==> [/opt/intel/oneapi/tbb/2022.1/lib/intel64/gcc4.8]
+        collapse library dir [/opt/intel/oneapi/pti/0.11/lib] ==> [/opt/intel/oneapi/pti/0.11/lib]
+        collapse library dir [/opt/intel/oneapi/mpi/2021.15/lib] ==> [/opt/intel/oneapi/mpi/2021.15/lib]
+        collapse library dir [/opt/intel/oneapi/mkl/2025.1/lib] ==> [/opt/intel/oneapi/mkl/2025.1/lib]
+        collapse library dir [/opt/intel/oneapi/ippcp/2025.1/lib/] ==> [/opt/intel/oneapi/ippcp/2025.1/lib]
+        collapse library dir [/opt/intel/oneapi/ipp/2022.1/lib] ==> [/opt/intel/oneapi/ipp/2022.1/lib]
+        collapse library dir [/opt/intel/oneapi/dnnl/2025.1/lib] ==> [/opt/intel/oneapi/dnnl/2025.1/lib]
+        collapse library dir [/opt/intel/oneapi/dal/2025.4/lib] ==> [/opt/intel/oneapi/dal/2025.4/lib]
+        collapse library dir [/opt/intel/oneapi/compiler/2025.1/lib] ==> [/opt/intel/oneapi/compiler/2025.1/lib]
+        collapse library dir [/opt/intel/oneapi/ccl/2021.15/lib/] ==> [/opt/intel/oneapi/ccl/2021.15/lib]
+        implicit libs: [pcap;svml;irng;stdc++;imf;m;gcc_s;gcc;irc;dl;gcc_s;gcc;sycl;sycl-devicelib-host;c;gcc_s;gcc;irc_s]
+        implicit objs: [/lib/x86_64-linux-gnu/Scrt1.o;/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/tmp/icpx-86391b0072/CMakeCXXCompilerABI-d5ce29.o;/tmp/icpx-86391b0072/cmTC_32ee9-wrapper-e6d980.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/opt/intel/oneapi/compiler/2025.1/lib;/opt/intel/oneapi/compiler/2025.1/lib/clang/20/lib/x86_64-unknown-linux-gnu;/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/opt/intel/oneapi/compiler/2025.1/opt/compiler/lib;/lib;/usr/lib;/opt/intel/oneapi/tcm/1.3/lib;/opt/intel/oneapi/umf/0.10/lib;/opt/intel/oneapi/tbb/2022.1/lib/intel64/gcc4.8;/opt/intel/oneapi/pti/0.11/lib;/opt/intel/oneapi/mpi/2021.15/lib;/opt/intel/oneapi/mkl/2025.1/lib;/opt/intel/oneapi/ippcp/2025.1/lib;/opt/intel/oneapi/ipp/2022.1/lib;/opt/intel/oneapi/dnnl/2025.1/lib;/opt/intel/oneapi/dal/2025.4/lib;/opt/intel/oneapi/ccl/2021.15/lib]
+        implicit fwks: []
+      
+      
+...

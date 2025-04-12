@@ -1,0 +1,6 @@
+/challenge/build/CMakeFiles/edit_cache.dir
+/challenge/build/CMakeFiles/rebuild_cache.dir
+/challenge/build/src/CMakeFiles/gpu-router.dir
+/challenge/build/src/CMakeFiles/run.dir
+/challenge/build/src/CMakeFiles/edit_cache.dir
+/challenge/build/src/CMakeFiles/rebuild_cache.dir
