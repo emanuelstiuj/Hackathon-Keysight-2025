@@ -1,2 +1,1 @@
-Exista doua variante pentru input_node (una decomentata care citeste pachetele din .pcap care functioneaza) si alta comentata (cand se primesc pachetele
-pe interfata care nu functioneaza). Nu se trimit pachetele pe interfata de output (in sending_node) dar se afiseaza ca le primesc pe interfata.
+Există două variante pentru input_node: una decomentată, care citește pachetele din fișierul .pcap și funcționează corect, și alta comentată, care primește pachetele pe interfață prin socket. În cea comentată, se afișează că pachetele sunt primite, dar nu sunt trimise pe interfață, afișându-se un mesaj de eroare pentru trimitere.
